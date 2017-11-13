@@ -31,7 +31,7 @@ public class Lab1 {
 		return g;
 	}
 	static void showDirectedGraph(Graph G) {
-		JFrame frame = new JFrame("展示有向图");
+		JFrame frame = new JFrame("灞曠ず鏈夊悜鍥�");
 		JButton butt = new JButton("save as a jpg");
 		frame.getContentPane().add(BorderLayout.SOUTH, butt);
         MyG ll=new MyG(G); //extends JLabel
@@ -49,7 +49,7 @@ public class Lab1 {
                 File f = new File("./aaa.jpg");
                 try {
                 	ImageIO.write(img,"jpg",f);
-                	butt.setText("保存成功！");
+                	butt.setText("淇濆瓨鎴愬姛锛�");
                 } catch (IOException ex) {
                 }
                 g2d.dispose();
@@ -85,12 +85,14 @@ public class Lab1 {
 		String[] div = inputText.split(" ");
 		String ans = "";
 		for(int i = 0; i < div.length - 1; i++) {
-			ans = ans + " " + div[i];
+			ans = ans + div[i] + " ";
 			if(queryBridgeWords(G, div[i].toLowerCase(), div[i + 1].toLowerCase()).charAt(6) == ':') {
-				ans = ans + " " + str.elementAt((int)(Math.random() * 100) % str.size());
+				ans = ans + str.elementAt((int)(Math.random() * 100) % str.size()) + " ";
 			}
 		}
-		ans = ans + " " + div[div.length - 1];
+		if(div.length >= 1) {
+			ans = ans + div[div.length - 1];
+		}
 		return ans;
 	}
 	
@@ -134,7 +136,7 @@ public class Lab1 {
     		e = nxt[e];
     	}
     	
-    	JFrame frame = new JFrame("展示最短路");
+    	JFrame frame = new JFrame("灞曠ず鏈�鐭矾");
         MyG ll=new MyG(G, path);
         frame.add(ll);
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
