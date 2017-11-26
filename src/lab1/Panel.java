@@ -12,7 +12,7 @@ import javax.swing.JTextField;
 import javax.swing.JFileChooser;
 import java.io.File;
 
-public class MainF extends JFrame {
+public class Panel extends JFrame {
 	static String s;
 	static String echo = "no text";
 	public void go() {

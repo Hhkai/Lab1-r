@@ -12,7 +12,7 @@ class WordImg {
 	public int id2y(int id) {
 		return (int)(y_rad * Math.sin(2 * Math.PI * id / totalnum) + y_rad + 30);
 	}
-	void drawArrow(Graphics g, int x, int y, int nx, int ny, int value, boolean bold) {
+	private void drawArrow(Graphics g, int x, int y, int nx, int ny, int value, boolean bold) {
 		if (bold == true) {
 			g.setColor(Color.green);
 		}
@@ -41,7 +41,7 @@ class WordImg {
 		g.drawString(""+value, (x + nx) / 2, (y + ny) / 2);
 		g.setColor(Color.black);
 	}
-	void mdArc(Graphics g, int value){
+	private void mdArc(Graphics g, int value){
 		g.setColor(Color.blue);
 		g.drawArc(x + name.length() - 3, y - 30, 60, 60, 225, 270);
 		int bx = x + name.length() + 57;
@@ -57,12 +57,12 @@ class WordImg {
 		g.setColor(Color.black);
 	}
 	
-	static int[] nxt;
-	String name;
-	int x;
-	int y;
-	int id;
-	int totalnum;
+	private static int[] nxt;
+	private String name;
+	private int x;
+	private int y;
+	private int id;
+	private int totalnum;
 	HashMap<Integer, Integer> neighbors;   //neighbors' id -> value
 	WordImg(Graph gra, int i) {
 		//System.out.println("aa a");

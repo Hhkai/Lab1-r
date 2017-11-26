@@ -17,7 +17,7 @@ import javax.imageio.ImageIO;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 
-public class Lab1 {
+public class Ctrl {
 	static Graph gra;
 	static String strS;
 	static Vector<String> str;
